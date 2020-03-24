@@ -207,13 +207,25 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 @class UIImage;
 
-SWIFT_CLASS("_TtC9IguamaSDK19IGInteractionMethod")
-@interface IGInteractionMethod : NSObject
+SWIFT_CLASS("_TtC9IguamaSDK9IguamaSDK")
+@interface IguamaSDK : NSObject
 @property (nonatomic, copy) void (^ _Nullable refreshToken)(NSString * _Nonnull, void (^ _Nonnull)(NSString * _Nonnull, NSString * _Nonnull));
-- (nonnull instancetype)initWithMember_id:(NSString * _Nonnull)member_id first_name:(NSString * _Nonnull)first_name last_name:(NSString * _Nullable)last_name email:(NSString * _Nonnull)email balance:(NSInteger)balance access_token:(NSString * _Nonnull)access_token refresh_token:(NSString * _Nonnull)refresh_token OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 + (void)configWithClientId:(NSString * _Nonnull)clientId clientKey:(NSString * _Nonnull)clientKey sdkLogoImage:(UIImage * _Nullable)sdkLogoImage isSandbox:(BOOL)isSandbox;
-- (void)loginWithCompletion:(void (^ _Nullable)(BOOL))completion;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (void)memberId:(NSString * _Nonnull)member_id;
+- (void)useFirstNameWithFirst_name:(NSString * _Nonnull)first_name;
+- (void)useLastNameWithLast_name:(NSString * _Nonnull)last_name;
+- (void)useEmailWithEmail:(NSString * _Nonnull)email;
+- (void)useAccessTokenWithAccess_token:(NSString * _Nonnull)access_token;
+- (void)useGrantCodeWithGrant_code:(NSString * _Nonnull)grant_code;
+- (void)useBalanceWithBalance:(NSInteger)balance;
+- (void)useClientCredentials;
+@end
+
+
+@interface IguamaSDK (SWIFT_EXTENSION(IguamaSDK))
+- (void)loginWithMember_id:(NSString * _Nonnull)member_id;
+- (void)loginWithWebsite;
 @end
 
 
@@ -443,13 +455,25 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 @class UIImage;
 
-SWIFT_CLASS("_TtC9IguamaSDK19IGInteractionMethod")
-@interface IGInteractionMethod : NSObject
+SWIFT_CLASS("_TtC9IguamaSDK9IguamaSDK")
+@interface IguamaSDK : NSObject
 @property (nonatomic, copy) void (^ _Nullable refreshToken)(NSString * _Nonnull, void (^ _Nonnull)(NSString * _Nonnull, NSString * _Nonnull));
-- (nonnull instancetype)initWithMember_id:(NSString * _Nonnull)member_id first_name:(NSString * _Nonnull)first_name last_name:(NSString * _Nullable)last_name email:(NSString * _Nonnull)email balance:(NSInteger)balance access_token:(NSString * _Nonnull)access_token refresh_token:(NSString * _Nonnull)refresh_token OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 + (void)configWithClientId:(NSString * _Nonnull)clientId clientKey:(NSString * _Nonnull)clientKey sdkLogoImage:(UIImage * _Nullable)sdkLogoImage isSandbox:(BOOL)isSandbox;
-- (void)loginWithCompletion:(void (^ _Nullable)(BOOL))completion;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (void)memberId:(NSString * _Nonnull)member_id;
+- (void)useFirstNameWithFirst_name:(NSString * _Nonnull)first_name;
+- (void)useLastNameWithLast_name:(NSString * _Nonnull)last_name;
+- (void)useEmailWithEmail:(NSString * _Nonnull)email;
+- (void)useAccessTokenWithAccess_token:(NSString * _Nonnull)access_token;
+- (void)useGrantCodeWithGrant_code:(NSString * _Nonnull)grant_code;
+- (void)useBalanceWithBalance:(NSInteger)balance;
+- (void)useClientCredentials;
+@end
+
+
+@interface IguamaSDK (SWIFT_EXTENSION(IguamaSDK))
+- (void)loginWithMember_id:(NSString * _Nonnull)member_id;
+- (void)loginWithWebsite;
 @end
 
 

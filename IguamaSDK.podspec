@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name         = "IguamaSDK"
-    s.version      = "0.1.1"
+    s.version      = "1.0.0"
     s.summary      = "Iguama's loyalty program SDK."
     s.description  = <<-DESC
     Iguama SDK empowers Loyalty Programs around the world to build brand loyalty by enabling innovative and creative new ways for members to maximize rewards value at their favorite online shopping stores
@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
                   LICENSE
                 }
     s.author             = "Iguama Inc"
-    s.source       = { :git => "https://github.com/iguama/iguama-ios-sdk", :tag => "#{s.version}" }    
+    s.source       = { :git => "https://github.com/iguama/iguama-ios-sdk.git", :tag => "#{s.version}" }    
     s.source_files = "IguamaSDK.framework/Headers/*.h"
     s.public_header_files = "IguamaSDK.framework/Headers/*.h"
     s.vendored_frameworks = "IguamaSDK.framework"
